@@ -1,33 +1,19 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'ngSwitch-example',
+  selector: 'ngStyle-example',
   template: `
   <h2>{{welcomeComponentMessage}}</h2>
-  <ul *ngFor="let person of people"
-    [ngSwitch] = "person.country">
-
-    <li *ngSwitchCase="UK" class="text-success">
-    {{person.name}} ({{person.country}})
-    </li>
-
-    <li *ngSwitchCase="USA" class="text-primary">
-    {{person.name}} ({{person.country}})
-    </li>
-
-    <li *ngSwitchCase="HK" class="text-danger">
-    {{person.name}} ({{person.country}})
-    </li>
-
-    <li *ngSwitchDefault class="text-warning">
-    {{person.name}} ({{person.country}})
+  <ul *ngFor="let person of people">
+    <li [ngStyle]="{'color':getColor(person.country)}">
+      {{person.name}} ({{person.country}})
     </li>
   </ul>
   `
 })
 
-export class NGSwitchComponent {
-  welcomeComponentMessage = "NgSwitch Example";
+export class NgStyleExampleComponent {
+  welcomeComponentMessage = "NgStyle Example";
 
   people: any[] = [
     {
@@ -56,4 +42,18 @@ export class NGSwitchComponent {
       "country": 'USA'
     }
   ];
+
+// Method to return color based on country name
+  getColor(country){
+    switch(country){
+      case 'UK':
+        return 'green';
+      case 'USA':
+        return 'blue';
+      case 'HK':
+        return 'red';
+      default:
+        return 'orange';
+    }
+  }
 }
