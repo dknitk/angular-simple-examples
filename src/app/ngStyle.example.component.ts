@@ -5,7 +5,12 @@ import { Component } from '@angular/core';
   template: `
   <h2>{{welcomeComponentMessage}}</h2>
   <ul *ngFor="let person of people">
-    <li [ngStyle]="{'color':getColor(person.country)}">
+    <!-- Directive Example -->
+    <!-- <li [ngStyle]="{'color':getColor(person.country)}"> -->
+    <!-- Alternative (individual style properties) way -->
+    <!-- <li [style.color]="getColor(person.country)"> -->
+    <!-- Directive For Font Size and property for color Example -->
+    <li [ngStyle]="{'font-size.px':24}"  [style.color]="getColor(person.country)">
       {{person.name}} ({{person.country}})
     </li>
   </ul>
