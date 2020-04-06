@@ -10,12 +10,13 @@ import { NgIfExampleComponent } from './ngif.example.component';
 import { NGSwitchComponent } from './ngswitch.example.component';
 import { NgStyleExampleComponent } from './ngStyle.example.component';
 import { NgClassExampleComponent } from './ngclass.example.component';
+import { NgNonBindableExampleComponent } from './ngnonbindable.example.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
   declarations: [ AppComponent, HelloComponent, NgForExampleComponent
   ,NgForGroupExampleComponent, NgIfExampleComponent, NGSwitchComponent,
-  NgStyleExampleComponent, NgClassExampleComponent
+  NgStyleExampleComponent, NgClassExampleComponent, NgNonBindableExampleComponent
    ],
   bootstrap:    [ AppComponent ]
 })

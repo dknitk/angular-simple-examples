@@ -27,7 +27,7 @@ import { Component } from '@angular/core';
 
 export class NgClassExampleComponent {
   welcomeComponentMessage = "NgClass Example";
-
+  
   people: any[] = [
     {
       "name": "Douglas Pace",
