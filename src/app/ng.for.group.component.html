@@ -1,0 +1,11 @@
+<h2> {{welcomeComponentMessage}} </h2>
+<!-- Iterate Items using For Loop Group-->
+
+<UL *ngFor="let group of peopleByCountry">
+  <LI> {{group.country}} </LI>
+  <UL>
+    <LI *ngFor="let person of group.people">
+      {{person.name}}
+    </LI>
+  </UL>  
+</UL>

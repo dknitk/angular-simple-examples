@@ -1,0 +1,54 @@
+<h2> {{welcomeComponentMessage}} </h2>
+<!-- Iterate Items using For Loop -->
+<ul>
+  <li *ngFor="let person of people">
+    {{person.name}}
+  </li>
+</ul>
+
+<!-- Iterate Items using For Loop and display Item with Index-->
+<h2> With Index </h2>
+<ul>
+  <li *ngFor="let person of people; let i = index">
+    {{i+1}} - {{person.name}}
+  </li>
+</ul>
+
+<!-- Iterate Items using For Loop and display Item with Index-->
+<h2> With Index as I </h2>
+<ul>
+  <li *ngFor="let person of people; index as i">
+    {{i+1}} - {{person.name}}
+  </li>
+</ul>
+
+<!-- Iterate Items using For Loop and display First element as true -->
+<h2> With First as f </h2>
+<ul>
+  <li *ngFor="let person of people; first as f">
+    {{f}} - {{person.name}}
+  </li>
+</ul>
+
+<!-- Iterate Items using For Loop and display  Last element as true -->
+<h2> With Last as l </h2>
+<ul>
+  <li *ngFor="let person of people; last as l">
+    {{l}} - {{person.name}}
+  </li>
+</ul>
+
+<!-- Iterate Items using For Loop and display Odd element as true -->
+<h2> With Odd Element true </h2>
+<ul>
+  <li *ngFor="let person of people; odd as o">
+    {{o}} - {{person.name}}
+  </li>
+</ul>
+<!-- Iterate Items using For Loop and display Even element as true -->
+<h2> With Even Element true</h2>
+<ul>
+  <li *ngFor="let person of people; even as e">
+    {{e}} - {{person.name}}
+  </li>
+</ul>
