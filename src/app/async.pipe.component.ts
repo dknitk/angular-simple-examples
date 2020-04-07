@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'async-pipe-example',
@@ -15,6 +16,8 @@ import { Component } from '@angular/core';
 export class AsyncPipeComponent {
 
   promise: Promise<string>;
+  observableData: number;
+  subsciption: Object = null;
 
   constructor() {
     this.promise = this.getPromise();
@@ -24,5 +27,9 @@ export class AsyncPipeComponent {
     return new Promise((resolve, reject) => {
       setTimeout(() => resolve("Promise Complete!"), 3000)
     });
+  }
+
+  getObservable(){
+    return Observable.
   }
 }
