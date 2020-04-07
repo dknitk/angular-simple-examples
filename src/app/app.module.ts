@@ -12,12 +12,13 @@ import { NgStyleExampleComponent } from './ngStyle.example.component';
 import { NgClassExampleComponent } from './ngclass.example.component';
 import { NgNonBindableExampleComponent } from './ngnonbindable.example.component';
 import { PipeExampleComponent } from './pipe.example.component';
+import { AsyncPipeComponent } from './async.pipe.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
   declarations: [ AppComponent, HelloComponent, NgForExampleComponent
   ,NgForGroupExampleComponent, NgIfExampleComponent, NGSwitchComponent,
-  NgStyleExampleComponent, NgClassExampleComponent, NgNonBindableExampleComponent, PipeExampleComponent
+  NgStyleExampleComponent, NgClassExampleComponent, NgNonBindableExampleComponent, PipeExampleComponent, AsyncPipeComponent
    ],
   bootstrap:    [ AppComponent ]
 })
